@@ -4,8 +4,6 @@ Rails.application.routes.draw do
     sessions: 'custom_sessions',
   }
 
-  get 'signup', to: 'custom_registrations#new', as: 'new_user_registration'
-
   root 'posts#index'
 
   resources :users, except: [:new, :create] do
